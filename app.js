@@ -1,7 +1,10 @@
+//setting variables
+
 const container = document.getElementById('container');
 
 let count = 1;
 
+// genereting grid 
 function genGrid(num) {      
 
     container.style.setProperty('--grid-rows', num);
@@ -20,7 +23,7 @@ function genGrid(num) {
 }
 
 
-
+//on hover rainbow effect
 function onHover(id) { 
     let r = Math.floor(Math.random() * 255)
     let g = Math.floor(Math.random() * 255)
@@ -28,7 +31,7 @@ function onHover(id) {
          
     document.getElementById(id).style.backgroundColor = `rgb(${r},${g},${b})`;
 }
-
+//reset and set grid 
 function reSet() {        
     let gridSize = prompt("set grid dimension");
     if(gridSize > 100 || gridSize < 0 || gridSize == NaN){
