@@ -67,4 +67,3 @@ function clearGrid(className) {
     const element = document.getElementById(className);
     element.textContent = '';
 }
-window.onload(genGrid(64))
