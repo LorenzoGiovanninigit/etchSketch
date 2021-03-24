@@ -13,7 +13,7 @@ function genGrid(num) {
 
     container.style.setProperty('--grid-rows', num);
     container.style.setProperty('--grid-cols', num);
-	
+	container.setAttribute('onmouseleave', 'onrelease()');
     for (let i = 0; i < num ** 2; i++) {
 
         const box = document.createElement('div');
@@ -21,8 +21,9 @@ function genGrid(num) {
         box.innerText = "";
         box.className = 'box';
         box.id = ('id' + count);
-        box.setAttribute('onmouseover', 'onHover(this.id)');
-		box.setAttribute('onclick', 'onclicco()');
+		box.setAttribute('onmouseover', 'onHover(this.id)');
+        box.setAttribute('onmousedown', 'onpush()');
+		box.setAttribute('onmouseup', 'onrelease()');
         count++;
     };
 	
@@ -44,10 +45,8 @@ rainbowBtn.onclick = function(){
     }
 		
 
-function onclicco() {
-	if (flg === false){flg=true }
-	else {flg=false}
-	}
+function onpush() {flg=true;}
+function onrelease() {flg=false;}
 	
 //on hover rainbow effect
 function onHover(id) { 
