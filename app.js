@@ -41,26 +41,7 @@ blackBtn.onclick = function(){
 rainbowBtn.onclick = function(){
     rainbow = true;
     black= false; 
-    //if (flg === false){flg=true }
-	//else {flg=false}
-	
-	
-	childList = document.getElementById('container').childNodes
-	if(flg==false){
-				for (let i = 0; i < childList.length; i++) {
-					childList[i].setAttribute('onmouseover', 'onHover(x.id)');
-				}
-			flg=true
-	}
-	else if (flg===true) {
-				for (let i = 0; i < num ** childList.length; i++) {
-					childList[i].setAttribute('onmouseover', '');
-				}
-				
-				flg=false
-		}
-		else {}
-	}
+    }
 		
 
 function onclicco() {
